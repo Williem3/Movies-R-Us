@@ -1,0 +1,27 @@
+.display {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameSpace img {
+  height: 90px;
+  margin: 10px 20px 6px 20px;
+}
+.nameSpace {
+  display: flex;
+  align-items: center;
+}
+.nameSpace h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #f8eeda;
+}
+.contactInfo {
+  margin: 10px 20px 6px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #f8eeda;
+}
+
+.main {
+  background-color: #1B4536;
+  margin: 0;
+}

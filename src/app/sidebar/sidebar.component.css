@@ -1,0 +1,28 @@
+li {
+  list-style: none;
+  padding-left: 0;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+button {
+  color: #F5B842;
+  border: 0;
+  padding: 5px;
+  width: 100%;
+  background-color: #2A2822;
+}
+
+button:focus {
+  outline: none;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#sideBar {
+  height: 100%;
+}

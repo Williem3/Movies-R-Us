@@ -1,0 +1,42 @@
+#wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+#topRatedSection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 70vw;
+  flex-direction: column;
+  height: 100%;
+  color: #F5B842;
+}
+
+
+#topRatedSection a {
+  color: #F5B842;
+  text-shadow:
+    -1px -1px 0 #2A2822,
+    1px -1px 0 #2A2822,
+    -1px 1px 0 #2A2822,
+    1px 1px 0 #2A2822;
+}
+
+.topRatedTitle {
+  color: #F5B842;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#movieSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movieContent img {
+  width: 65%;
+}
+.movieContent {
+  flex: 1 0 30%;
+  font-family: 'Poppins', sans-serif;
+}

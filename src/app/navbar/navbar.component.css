@@ -1,0 +1,23 @@
+.nav {
+  display:flex;
+  flex-flow:row nowrap;
+  list-style:none;
+  justify-content:space-between;
+  background-color: #2A2822;
+  margin:0;
+  height: 80px;
+  align-items: center;
+  font-size: larger;
+  border-bottom-left-radius: 85%;
+  border-bottom-right-radius: 85%;
+}
+.nav li {
+  margin:0 auto;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #f8eeda;
+  font-family: 'Poppins', sans-serif;
+}
+

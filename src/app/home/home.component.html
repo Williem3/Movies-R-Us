@@ -1,0 +1,36 @@
+<main id="wrapper">
+
+  <section id="sideBar">
+    <app-sidebar></app-sidebar>
+  </section>
+
+
+  <section id="topRatedSection">
+    <div class="topRatedTitle">
+      Top Rated Movies
+    </div>
+    <div id="movieSection">
+      <div *ngFor="let movie of this.moviesService.data" class="movieContent">
+
+        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt=""/>
+
+        <div id="movieTitle">
+          {{movie.title}}
+        </div>
+
+        <div id="releaseDate">
+          {{movie.releaseDate}}
+        </div>
+
+        <div>
+          <a href="localhost:4200/movie/{{movie.id}}"> View details >> </a>
+        </div>
+
+        <div>
+          {{movie.vote_average}}
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
