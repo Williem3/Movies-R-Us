@@ -21,3 +21,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.nav li a:hover {
+  cursor: pointer;
+}
+

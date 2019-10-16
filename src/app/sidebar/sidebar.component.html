@@ -1,22 +1,22 @@
 <div id="sideBar">
-  <ul>
+  <ul [ngClass]="{'horizontalList': this.movieService.moviesListed}">
     <li>
       <button (click)="getMovies()">Top Rated Movies</button>
     </li>
     <li>
-      <button (click)="getGenre('horror')">Horror</button>
+      <button (click)="getGenre(27, 'Horror Movies')">Horror</button>
     </li>
     <li>
-      <button>Comedy</button>
+      <button (click)="getGenre(35, 'Comedy Movies')">Comedy</button>
     </li>
     <li>
-      <button>Drama</button>
+      <button (click)="getGenre(18, 'Drama Movies')">Drama</button>
     </li>
     <li>
-      <button>Action</button>
+      <button (click)="getGenre(28, 'Action Movies')">Action</button>
     </li>
     <li>
-      <button>Sci-Fi</button>
+      <button (click)="getGenre(878, 'Science Fiction Movies')">Sci-Fi</button>
     </li>
   </ul>
 </div>

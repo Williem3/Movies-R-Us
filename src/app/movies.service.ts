@@ -1,20 +1,12 @@
 import { Injectable } from '@angular/core';
 import {ApiService} from './api.service';
 
-export interface ApiResponse {
-  title: string;
-  releaseDate: string;
 
-}
-
-export interface TopRatedMovies {
-  results: Movie[];
-}
-export interface GenreMovies {
+export interface Movies {
   results: Movie[];
 }
 
-class Movie {
+interface Movie {
   id: number;
   title: string;
   releaseDate: string;
@@ -29,6 +21,8 @@ class Movie {
 export class MoviesService {
 
   data: Movie[];
+  movieListTitle: string;
+  moviesListed: boolean = false;
 
   constructor(public apiService: ApiService) {
   }
@@ -36,19 +30,34 @@ export class MoviesService {
 
   getMovies() {
     this.apiService.getMovies()
-      .subscribe((res: TopRatedMovies ) => {
-        console.log(res);
+      .subscribe((res: Movies ) => {
         this.data = res.results;
         console.log('movies', this.data);
       });
   }
 
-  getGenre(value) {
-    this.apiService.getGenre(value)
-      .subscribe((res: GenreMovies) => {
+  getGenre(genreID) {
+    this.apiService.getGenre(genreID)
+      .subscribe((res: Movies) => {
+        this.data = res.results;
+        console.log(genreID, this.data);
+      });
+  }
+
+  getUpcomingMovies() {
+    this.apiService.getUpcomingMovies()
+      .subscribe((res: Movies) => {
+        this.data = res.results;
+        console.log('New Movie List', this.data);
+      });
+  }
+
+  getPopularMovies() {
+    this.apiService.getPopularMovies()
+      .subscribe((res: Movies) => {
         console.log(res);
         this.data = res.results;
-        console.log(value, this.data);
+        console.log('Popular Movie List', this.data);
       });
   }
 }

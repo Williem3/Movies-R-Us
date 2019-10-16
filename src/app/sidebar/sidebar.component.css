@@ -3,13 +3,13 @@ li {
   padding-left: 0;
   display: inline-block;
   height: 100px;
-  width: 100px;
+  width: 100%;
 }
 button {
   color: #F5B842;
   border: 0;
-  padding: 5px;
   width: 100%;
+  padding: 25px;
   background-color: #2A2822;
 }
 
@@ -21,6 +21,10 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.horizontalList {
+  position: fixed;
 }
 
 #sideBar {

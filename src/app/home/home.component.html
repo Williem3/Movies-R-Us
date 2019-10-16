@@ -7,7 +7,7 @@
 
   <section id="topRatedSection">
     <div class="topRatedTitle">
-      Top Rated Movies
+      {{ this.moviesService.movieListTitle }}
     </div>
     <div id="movieSection">
       <div *ngFor="let movie of this.moviesService.data" class="movieContent">

@@ -14,12 +14,15 @@ export class SidebarComponent implements OnInit {
   }
 
   getMovies() {
+    this.movieService.movieListTitle = 'Top Rated Movies';
     this.movieService.getMovies();
+    this.movieService.moviesListed = true;
   }
 
-  getGenre(value) {
-    this.movieService.getGenre(value);
-    this.movieService.getMovies();
+  getGenre(genreID, genreTitle) {
+    this.movieService.movieListTitle = genreTitle;
+    this.movieService.getGenre(genreID);
+    this.movieService.moviesListed = true;
   }
 
 }
