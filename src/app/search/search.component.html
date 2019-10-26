@@ -1,0 +1,23 @@
+<input [(ngModel)]="searchMovie" placeholder="Search movie by keywords" />
+
+<button (click)="searchByKeyword()">Search</button>
+
+<div *ngFor="let movie of this.data">
+  <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt=""/>
+
+  <div id="movieTitle">
+    {{movie.title}}
+  </div>
+
+  <div id="releaseDate">
+    {{movie.releaseDate}}
+  </div>
+
+  <div>
+    <a href="localhost:4200/movie/{{movie.id}}"> View details >> </a>
+  </div>
+
+  <div>
+    {{movie.vote_average}}
+  </div>
+</div>

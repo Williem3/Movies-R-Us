@@ -6,7 +6,7 @@ export interface Movies {
   results: Movie[];
 }
 
-interface Movie {
+export interface Movie {
   id: number;
   title: string;
   releaseDate: string;
@@ -58,6 +58,14 @@ export class MoviesService {
         console.log(res);
         this.data = res.results;
         console.log('Popular Movie List', this.data);
+      });
+  }
+  getMoviesByKeyword(keyword)   {
+    this.apiService.getMoviesByKeyword(keyword)
+      .subscribe(( res: Movies) => {
+        console.log(res);
+        this.data = res.results;
+        console.log('Movie by users keyword', this.data);
       });
   }
 }

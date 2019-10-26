@@ -8,6 +8,7 @@ import {MoviesService} from '../movies.service';
 })
 export class SidebarComponent implements OnInit {
 
+
   constructor(public movieService: MoviesService) { }
 
   ngOnInit() {

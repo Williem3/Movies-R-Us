@@ -12,6 +12,9 @@ import {MoviesService} from './movies.service';
 import {ApiService} from './api.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import {FormsModule} from '@angular/forms';
+import { SearchComponent } from './search/search.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    SearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +32,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     ApprouterRoutingModule,
     router,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [ MoviesService, ApiService ],
   bootstrap: [AppComponent]
