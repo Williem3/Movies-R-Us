@@ -1,6 +1,6 @@
-*{
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
-  box-sizing: border-box;
+*{
 
 }
 
@@ -25,5 +25,12 @@ html{
 body{
 
   height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 
 }
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

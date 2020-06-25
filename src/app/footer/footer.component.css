@@ -13,15 +13,20 @@
 }
 .nameSpace h3 {
   font-family: 'Poppins', sans-serif;
-  color: #f8eeda;
+  color: #B3B3B3;
 }
 .contactInfo {
   margin: 10px 20px 6px 20px;
   font-family: 'Poppins', sans-serif;
-  color: #f8eeda;
+  color: #B3B3B3;
 }
 
 .main {
   background-color: #1B4536;
-  margin: 0;
+}
+mat-toolbar-row {
+  height: 5%;
+}
+.footerBG {
+  color: #37474F;
 }

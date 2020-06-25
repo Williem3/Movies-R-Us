@@ -7,6 +7,7 @@ export interface Movies {
 }
 
 export interface Movie {
+  favorited: boolean;
   id: number;
   title: string;
   releaseDate: string;
@@ -27,7 +28,6 @@ export class MoviesService {
   constructor(public apiService: ApiService) {
   }
 
-
   getMovies() {
     this.apiService.getMovies()
       .subscribe((res: Movies ) => {
@@ -35,7 +35,6 @@ export class MoviesService {
         console.log('movies', this.data);
       });
   }
-
   getGenre(genreID) {
     this.apiService.getGenre(genreID)
       .subscribe((res: Movies) => {
@@ -43,7 +42,6 @@ export class MoviesService {
         console.log(genreID, this.data);
       });
   }
-
   getUpcomingMovies() {
     this.apiService.getUpcomingMovies()
       .subscribe((res: Movies) => {
@@ -51,7 +49,6 @@ export class MoviesService {
         console.log('New Movie List', this.data);
       });
   }
-
   getPopularMovies() {
     this.apiService.getPopularMovies()
       .subscribe((res: Movies) => {
@@ -68,4 +65,13 @@ export class MoviesService {
         console.log('Movie by users keyword', this.data);
       });
   }
+  getMovieById(id) {
+    this.apiService.getMovieById(id)
+      .subscribe((res: Movies) => {
+        console.log(res);
+        this.data = res.results;
+        console.log('Movie by id', this.data);
+      });
+  }
+
 }

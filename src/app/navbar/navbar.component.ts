@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MoviesService} from '../movies.service';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,21 +8,18 @@ import {MoviesService} from '../movies.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+ Username = this.userService.User;
 
-  constructor(public movieService: MoviesService) { }
+
+  constructor(public movieService: MoviesService, public userService: UserService) {
+  }
 
   ngOnInit() {
-  }
-  getUpcomingMovies() {
-    this.movieService.movieListTitle = 'Upcoming Movies';
-    this.movieService.getUpcomingMovies();
-    this.movieService.moviesListed = true;
+    this.userService.checkUsername();
   }
 
-  getPopularMovies() {
-    this.movieService.movieListTitle = 'Popular Movies';
-    this.movieService.getPopularMovies();
-    this.movieService.moviesListed = true;
+  userLogout() {
+    this.userService.userLogout();
+    this.userService.checkUsername();
   }
-
 }

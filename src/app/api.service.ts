@@ -11,9 +11,6 @@ export class ApiService {
 
   baseUrl = 'https://api.themoviedb.org/3/';
 
-  getMovie(movieId) {
-    return this.http.get(`${this.baseUrl}movie/${movieId}?api_key=${this.apiKey}&language=en-US`);
-  }
   getMovies() {
     return this.http.get(`${this.baseUrl}movie/top_rated?api_key=${this.apiKey}&language=en-US&page=1`);
   }
@@ -33,9 +30,11 @@ export class ApiService {
   }
 
   getMoviesByKeyword(keyword) {
-    return this.http.get(`${this.baseUrl}search/keyword?api_key=${this.apiKey}&query=${keyword}&page=1`);
+    return this.http.get(`${this.baseUrl}search/keyword?api_key=${this.apiKey}&query=${keyword}`);
   }
 
-
+  getMovieById(id) {
+    return this.http.get(`${this.baseUrl}movie/${id}?api_key=${this.apiKey}&language=en-US`);
+  }
 
 }

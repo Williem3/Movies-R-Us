@@ -1,0 +1,25 @@
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40%;
+  margin-right: 40%;
+  background-color: #bcbcbc;
+  margin-top: 1%;
+  padding: 25px;
+  border-radius: 4px;
+}
+label {
+  color: #1A1A1A;
+}
+input {
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 2px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.switchBtn {
+  margin-top: 2%;
+  margin-left: 48%;
+  margin-right: 50%;
+}

@@ -1,0 +1,41 @@
+<mat-sidenav-container [hasBackdrop]="false" id="sideBar">
+  <mat-sidenav id="sideNav" #sidenav [mode]="side" opened="true" disableClose>
+    <mat-action-list>
+      <mat-list-item>
+        <button mat-icon-button (click)="getFavorites()">Saved Movies</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-icon-button>Watch later</button>
+      </mat-list-item>
+      <mat-list-item>
+        <div *ngIf="!editMode" (click)="editModeToggle()"><span mat-button class="menuButton"> Search </span></div>
+        <input autofocus *ngIf="editMode" type="text" style="border: none;" /><button><mat-icon style="cursor: pointer">search</mat-icon></button>
+      </mat-list-item>
+    </mat-action-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content id="sbContent">
+    <section id="topRatedSection">
+      <div class="cardList">
+        <mat-card *ngFor="let movie of this.userService.movieData" class="movieContent">
+          <mat-card-header>
+            <mat-card-title id="movieTitle">
+              {{movie.title}}
+            </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+            <img mat-card-image src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="" style="width: 100%; margin: 0; padding: 0;"/>
+            <div class="underImg">
+              Rating Average: {{movie.vote_average}}
+            </div>
+
+            <div class="underImg">
+              <a href="localhost:4200/movie/{{movie.id}}"> View details >> </a>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>

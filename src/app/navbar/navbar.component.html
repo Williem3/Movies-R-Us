@@ -1,14 +1,22 @@
-<ul class="nav">
-  <li>
-    <a routerLink="home">Home</a>
-  </li>
-  <li>
-    <a (click)="getUpcomingMovies()">Upcoming Movies</a>
-  </li>
-  <li>
-    <a (click)="getPopularMovies()">Popular Movies</a>
-  </li>
-  <li>
-    <a routerLink="search">Search</a>
-  </li>
-</ul>
+<mat-toolbar id="navBar">
+  <mat-toolbar-row class="fill-remaining-space">
+    <span></span>
+    <a routerLink="home">Movies 'R' Us</a>
+
+    <a routerLink="favorites">Favorite Movies</a>
+    <div class="userMenu">
+      <span  mat-button [matMenuTriggerFor]="menu">{{this.userService.User}}</span>
+      <div [matMenuTriggerFor]="menu" id="negative-space"></div>
+      <mat-icon [matMenuTriggerFor]="menu" class="centerIcon">keyboard_arrow_down</mat-icon>
+    </div>
+      <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon routerLink="login">account_circle</mat-icon><span routerLink="login" >Login/Register</span>
+      </button>
+
+      <button mat-menu-item *ngIf="this.userService.loggedIn">
+        <mat-icon (click)="userLogout()">supervisor_account</mat-icon><span (click)="userLogout()">Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

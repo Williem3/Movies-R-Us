@@ -1,7 +1,4 @@
-mat-list-item{
-  background-color: #ff7043;
 
-}
 mat-list-item button {
   width: 100%;
   text-align: left;
@@ -12,7 +9,6 @@ mat-list-item .menuButton {
 }
 
 #sbContent {
-
   display: flex;
   justify-content: space-between;
   padding: 1%;
@@ -34,12 +30,6 @@ mat-list-item .menuButton {
 
 #topRatedSection a {
   color: white;
-}
-.title {
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bolder;
-  align-self: center;
 }
 .movieContent img {
   width: 65%;
@@ -93,11 +83,4 @@ mat-card {
 }
 #sideBar {
   height: 91%;
-}
-
-.favorited {
-  color: lawngreen;
-}
-.notFavorited {
-  color: white;
 }

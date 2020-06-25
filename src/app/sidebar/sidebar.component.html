@@ -1,5 +1,5 @@
-<div id="sideBar">
-  <ul [ngClass]="{'horizontalList': this.movieService.moviesListed}">
+<mat-sidenav-container id="sideBar">
+  <mat-sidenav>
     <li>
       <button (click)="getMovies()">Top Rated Movies</button>
     </li>
@@ -18,5 +18,7 @@
     <li>
       <button (click)="getGenre(878, 'Science Fiction Movies')">Sci-Fi</button>
     </li>
-  </ul>
-</div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+  </mat-sidenav-content>
